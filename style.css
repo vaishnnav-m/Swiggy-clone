@@ -1,0 +1,505 @@
+@font-face {
+  font-family: proxima700;
+  src: url('fonts/700.ttf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: proxima;
+  src: url('fonts/ProximaNovaCond-Black\ .ttf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: proxima600;
+  src: url('fonts/600.ttf');
+}
+@font-face {
+  font-family: Basis_Grotesque_Pro;
+  src: url('fonts/BasisGrotesquePro-Bold.ttf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: Basis_Grotesque_Pro;
+  src: url('fonts/BasisGrotesquePro-Bold.ttf');
+  font-weight: 800;
+}
+@font-face {
+  font-family: basis-black;
+  src: url('fonts/BasisGrotesquePro-Black.ttf');
+}
+@font-face {
+  font-family: basis-black;
+  src: url('fonts/BasisGrotesquePro-Regular.ttf');
+  font-weight: 200;
+}
+@font-face {
+  font-family: Basis_Grotesque_Pro;
+  src: url('fonts/');
+  font-weight: 700;
+}
+@font-face {
+  font-family:aasis-medium ;
+  src: url('fonts/BasisGrotesquePro-Medium.ttf');
+  font-weight: 400;
+}
+/* common styles */
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  color: unset;
+}
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.container{
+  padding-top: 74px;
+}
+/* Header styles */
+
+/* header left */
+header{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0 15px 40px -20px rgba(40, 44, 63, .15);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+}
+.header-left{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.logo{
+  min-width: 192px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.logo svg{
+  transition: 300ms;
+}
+.logo svg:hover{
+  transform: scale(1.1);
+}
+.text-other{
+  margin-left: 45px;
+  font-family: proxima700, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #3d4152;
+  display: flex;
+}
+.text-other:hover{
+  color: #fc8019;
+}
+.text-other:hover .other::after{
+  background-color: #fc8019;
+}
+.other{
+  display: flex;
+  flex-direction: column-reverse;
+  line-height: 26px;
+}
+.other::after{
+  content: '';
+  width: 36px;
+  height: 0.1rem;
+  position: absolute;
+  background-color: #000;
+}
+
+.fa-angle-down{
+  font-size: 17px;
+  margin-top:3px ;
+  color: #fc8019;
+}
+.arrow-span{
+  display: flex;
+  align-items: center;
+  margin-left: 17px;
+}
+
+/* header right */
+.header-right{
+  flex: 2;
+}
+nav{
+  height: 80px;
+  max-width: 803px;
+  margin-left: 44px;
+ 
+
+}
+nav ul{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+nav ul li{
+  display: flex;
+  align-items: center;
+  color: #3d4152;
+  fill: #3d4152;
+  cursor: pointer;
+}
+
+.header-list li:hover {
+  color: #fc8019!important;
+  fill: #fc8019!important;
+}
+.text-nav{
+  margin-left: 10px;
+  font-size: 16px;
+  font-family: proxima600,Arial, Helvetica, sans-serif;
+ 
+}
+.icon-div{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+._2MSid{
+  fill: #fff;
+  stroke-width: 2px;
+  stroke: #282c3f;
+}
+.cart-amount{
+  font-family: cursive;
+  font-weight: 500;
+  position: absolute;
+  font-size: 14px;
+  transform: translate(6px);
+}
+.new{
+    color: #ffa700;
+    font-size: 10px;
+    font-family: 'proxima700';
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transform: translatey(-7px);
+}
+
+
+/* main body styles */
+
+main{
+  padding: 0 187px;
+}
+.sections{
+  position: relative;
+  padding-left: 16px;
+}
+.scrolling-arrow{
+  position: absolute;
+  right: 19px;
+  top: 0;
+  display: flex;
+  column-gap: 10px;
+}
+.scrolling-arrow button{
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+.heading{
+  font-size: 24px;
+  font-family: basis-black;
+  margin-bottom: 16px;
+  letter-spacing: -0.4px;
+}
+.food-verities{
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  overflow-x: auto;
+  column-gap: 25px; 
+}
+.food-verities::-webkit-scrollbar{
+  display: none;
+}
+.food{
+  width: 144px;
+  height: 180px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.food img{
+  width: 100%;
+  height: 100%;
+}
+.line-div{
+  width: 100%;
+  padding: 0 19px;
+  margin: 50px 0 46px;
+}
+.line{
+  width: 100%;
+  border: 1px solid rgb(240, 240, 245);
+}
+.restaurants-chain{
+  display: flex;
+  column-gap: 32px;
+  overflow: hidden;
+  overflow-x: auto;
+}
+.restaurants-chain::-webkit-scrollbar{
+  display: none;
+}
+.restaurants{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 32px;
+}
+.image-div{
+  width: 274px;
+  height: 184px;
+  position: relative;
+}
+.image-div img{
+  width: 100%;
+  height: 100%;
+  border-radius: 17px;
+  object-fit: cover;
+}
+.details{
+  display: flex;
+  flex-direction: column;
+  margin-left: 14px;
+}
+.restaurant-name{
+  font-family: Basis_Grotesque_Pro;
+  font-size: 18px;
+  color: rgba(2, 6, 12, 0.75);
+}
+.cards{
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  cursor: pointer;
+  transition: 100ms;
+}
+.cards:hover{
+  transform: scale(0.95);
+}
+.price-div{
+  height: 81px;
+  background: linear-gradient(rgba(27, 30, 36, 0) 0%, rgb(27, 30, 36) 84.21%);
+  display: flex;
+  align-items: end;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding-left: 11px;
+  padding-right: 11px;
+  padding-bottom: 8px;
+  border-bottom-left-radius: 17px;
+  border-bottom-right-radius: 17px;
+}
+.price{
+  font-family:basis-black;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: rgba(255, 255, 255, 0.92);
+}
+.time{
+  font-family:Basis_Grotesque_Pro;
+  color: rgba(2, 6, 12, 0.75);
+  display:flex;
+  align-items: center;
+}
+.dish-name{
+  font-family:'basis-black';
+  color: rgba(2, 6, 12, 0.6);
+  font-size: 16px;
+  font-weight: 200;
+}
+.buttons{
+  width: 100%;
+ margin-bottom: 37px;
+  display: flex;
+  column-gap: 8px;
+}
+.controls{
+  padding: 10px 15px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(226, 226, 231);
+  font-family: 'basis-black';
+  font-weight: 200;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  border-radius: 18px;
+}
+.normal{
+  font-size: 12px;
+  color: #000!important;
+}
+.expt{
+  margin-bottom: 0;
+}
+.pad{
+  padding-top: 3px;
+}
+.expt-img{
+  width: 253px;
+  height: 169px;
+}
+
+/* footer styles  */
+
+.footerr{
+  padding: 0 117px;
+  margin-bottom: 64px;
+}
+
+.links{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 32px;
+  row-gap: 16px;
+}
+.link{
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1.5px solid rgba(2, 6, 12, 0.1);
+    font-family:'aasis-medium';
+    font-weight: 400;  
+    column-gap: 2px;
+}
+.last{
+  margin-top: 64px;
+}
+.grid-last{
+  grid-template-columns: 1fr 1fr;
+}
+.links-app{
+  width: 100%;
+  height: 104px;
+  background-color: rgb(240, 240, 245);
+  display: flex;
+  justify-content: center;
+}
+.footer-txt{
+  height: 100%;
+  width: 480px;
+
+}
+.heading-ftr{
+  font-family: Basis_Grotesque_Pro;
+  font-weight: 800;
+  font-size: 28px;
+  color: rgba(2, 6, 12, 0.75);
+  margin-right: 11px;
+}
+.footer-icons{
+  height: 100%;
+  width: 479px;
+  margin: 0 8px;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  padding-left: 44px;
+}
+.fotr-icon{
+  height: 64px;
+  width: 208px;
+}
+.footer-bottom{
+  width: 100%;
+  height: 494px;
+  background-color: rgb(2, 6, 12);
+  padding: 0 265px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 50px;
+}
+.child{
+  padding-top:48px;
+}
+.swiggy-logo{
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.swiggy-txt{
+  font-family: Basis_Grotesque_Pro;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.4px;
+  color: rgba(255, 255, 255, 0.92);
+  margin-right: 8px;
+  margin-left: 8px;
+}
+.copy-right{
+  font-family: basis-black;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.3px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.heading-li{
+  font-family: Basis_Grotesque_Pro;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.3px;
+  color: rgba(255, 255, 255, 0.92);
+}
+.child-list{
+  margin-bottom: 52px;
+}
+.child-list li{
+  font-family: basis-black;
+  font-weight: 200;
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  
+}
+.cities-btn{
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: unset;
+    height: 32px;
+    cursor: pointer;
+    padding: 4px 8px;
+    width: 120px;
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.normal-ftr{
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
